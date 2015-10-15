@@ -10,6 +10,9 @@ concat = require("gulp-concat")
 uglify = require("gulp-uglify")
 sourcemaps = require('gulp-sourcemaps');
 
+reactify = require("reactify");
+browserify = require("gulp-browserify");
+
 # img
 imagemin = require('gulp-imagemin')
 
@@ -21,36 +24,14 @@ svg2png   = require('gulp-svg2png')
 # css docs
 styledown = require("gulp-styledown")
 
+# path
 paths = {
   cssSource: "source/css"
   cssDist: "public/css"
 }
 
 
-#gulp.task "compass", () ->
-#  gulp.src("#{paths.cssSource}/**/*.scss")
-#  .pipe compass
-#    config_file: "./config.rb"
-#    css: paths.cssSource
-#    sass: paths.cssSource
-#
-#  .pipe(gulp.dest(paths.cssSource))
-#
-#
-#gulp.task "autoprefixer", ["compass"], ->
-#  gulp.src("#{paths.cssSource}/*.css")
-#  .pipe(autoprefixer({
-#      browsers: ["last 6 version", "> 1%", "ie 8", "Opera 12.1"]
-#    }))
-#  .pipe(gulp.dest(paths.cssSource))
-#
-#
-#gulp.task "csso", ["autoprefixer"], ->
-#  gulp.src("#{paths.cssSource}/*.css")
-#  .pipe(csso())
-#  .pipe(gulp.dest(paths.cssDist))
-
-
+# tasks
 gulp.task "css", ->
   gulp.src("#{paths.cssSource}/**/*.scss")
   .pipe compass
@@ -63,23 +44,12 @@ gulp.task "css", ->
   .pipe(gulp.dest(paths.cssDist))
 
 
-gulp.task "lib", ->
-  gulp.src([
-    "./source/js/lib/jquery-2.1.4.js"
-  ])
-  .pipe(concat("lib.js", {sourceRoot: yes}))
-  .pipe(uglify())
-  .pipe(gulp.dest("./public/js"))
-
-
 gulp.task "js", ->
-  gulp.src([
-    "./source/js/scr/main.js"
-  ])
-  .pipe(sourcemaps.init())
-  .pipe(concat("project.js"))
+  gulp.src("source/js/app.js")
+  .pipe browserify
+    transform: reactify
+  .pipe(concat("app.js"))
   .pipe(uglify())
-  .pipe(sourcemaps.write())
   .pipe(gulp.dest("./public/js"))
 
 
@@ -116,13 +86,14 @@ gulp.task "cssdoc", ->
   .pipe gulp.dest './cssDOC/'
 
 
+# watcher
 gulp.task "watch", ->
   gulp.watch("source/css/**/*.scss", ["css"])
   gulp.watch("source/js/scr/**/*.js", ["js"])
-  gulp.watch("source/js/lib/**/*.js", ["lib"])
   gulp.watch("source/image/**/*", ["img"])
 
 
-gulp.task("default", ["css", "js", "lib", "img"])
+# command
+gulp.task("default", ["css", "js", "img"])
 gulp.task("w", ["css", "js", "watch"])
 
