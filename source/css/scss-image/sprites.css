@@ -1,23 +1,11 @@
-.icons-sprite, .icon-arrow-down-big, .icon-arrow-right {
+.icons-sprite {
   background-image: url('../../image/sprites/icons-s9187b2edb8.png');
   background-repeat: no-repeat;
 }
 
-.inline-block, .icon-arrow-down-big, .icon-arrow-right {
+.inline-block {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
   *display: inline;
-}
-
-.icon-arrow-down-big {
-  background-position: 0 0;
-  height: 50px;
-  width: 13px;
-}
-
-.icon-arrow-right {
-  background-position: 0 -51px;
-  height: 13px;
-  width: 30px;
 }
