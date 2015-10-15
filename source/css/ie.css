@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700&subset=cyrillic,latin);
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Proxima Nova Thin"), url('../fonts/Proxima_Nova_Thin.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: 100;
+  src: local("Proxima Nova Thin Italic"), url('../fonts/Proxima_Nova_Thin_Italic.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Proxima Nova Light"), url('../fonts/Proxima_Nova_Light.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Proxima Nova Regular"), url('../fonts/Proxima_Nova_Regular.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Proxima Nova Regular Italic"), url('../fonts/Proxima_Nova_Regular_Italic.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Proxima Nova Semibold"), url('../fonts/Proxima_Nova_Semibold.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: 600;
+  src: local("Proxima Nova Semibold Italic"), url('../fonts/Proxima_Nova_Semibold_Italic.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Proxima Nova Bold"), url('../fonts/Proxima_Nova_Bold.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Proxima Nova Bold Italic"), url('../fonts/Proxima_Nova_Bold_Italic.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Proxima Nova Black"), url('../fonts/Proxima_Nova_Black.otf?1427993873');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: 800;
+  src: local("Proxima Nova Black Italic"), url('../fonts/Proxima_Nova_Black_Italic.otf?1427993873');
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.zeo-about__title.zeo-about__title_white {
+  color: #000;
+}
