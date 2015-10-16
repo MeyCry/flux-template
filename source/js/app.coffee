@@ -1,4 +1,13 @@
 $ = require("jquery")
+React = require("react")
+ReactDOM = require('react-dom')
+
+Main = require("./flux/views/Main")
 
 $ ->
-  console.log "hi all"
+  app = document.getElementById("app")
+
+  ReactDOM.render(
+    `<Main/>`,
+    app
+  )

@@ -520,8 +520,10 @@ html {
 
 html,
 body,
-.zeo-main-wrap {
+.container {
   min-width: 320px;
+  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -553,7 +555,6 @@ body * img::selection {
 
 .container {
   height: auto;
-  min-height: 100%;
 }
 
 .main {

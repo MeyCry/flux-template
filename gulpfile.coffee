@@ -89,7 +89,7 @@ gulp.task "cssdoc", ->
 # watcher
 gulp.task "watch", ->
   gulp.watch("source/css/**/*.scss", ["css"])
-  gulp.watch("source/js/scr/**/*.js", ["js"])
+  gulp.watch("source/js/**/*.js", ["js"])
   gulp.watch("source/image/**/*", ["img"])
 
 
