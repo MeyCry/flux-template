@@ -50,7 +50,7 @@ Store.dispatcherIndex = Dispatcher.register(function(payload) {
       action = payload.action;
       switch (action.actionType) {
         case "loadContainers":
-          console.log(hi);
+          console.log("hi");
           break;
         default:
           return true;

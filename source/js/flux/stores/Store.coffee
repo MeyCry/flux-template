@@ -39,7 +39,7 @@ Store.dispatcherIndex = Dispatcher.register (payload) ->
 
       switch action.actionType
         when "loadContainers"
-          console.log hi
+          console.log "hi"
 
         else return true
 
