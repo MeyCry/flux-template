@@ -1,4 +1,6 @@
 React = require("react")
+ReactRouter = require('react-router')
+{Link} = ReactRouter
 
 Store = require("../stores/Store")
 Actions = require("../actions/Actions")
@@ -25,6 +27,9 @@ Main = React.createClass({
       <div className="app">
         <span>{this.state.countClick}</span>
         <button onClick={this.handleClick}>click me</button>
+        <div>
+          <Link to="/category">Go to category</Link>
+        </div>
       </div>
     )`
 })
