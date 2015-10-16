@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>PageName - ProjectName</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
     <!-- сначала подключаем css -->
-    <link rel="stylesheet" type="text/css" media="all" href="public/css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/style.css"/>
     <!--[if lte IE 7]>
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="public/css/ie.css"/><![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/css/ie.css"/><![endif]-->
 
     <!-- потом все остальные скрипты -->
-    <script src="public/js/app.js"></script>
+    <script src="/js/app.js"></script>
 </head>
 <body>
 <section class="container">
@@ -22,7 +22,9 @@
     </header>
     <section class="main">
         <div class="main__inner">
-            <div id="app"></div>
+            <div id="app">
+                <%- reactOutput %>
+            </div>
         </div>
     </section>
 </section>

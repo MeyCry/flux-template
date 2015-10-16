@@ -49,7 +49,7 @@ gulp.task "js", ->
   .pipe browserify
     transform: reactify
   .pipe(concat("app.js"))
-  .pipe(uglify())
+#  .pipe(uglify())
   .pipe(gulp.dest("./public/js"))
 
 

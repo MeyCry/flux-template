@@ -49,7 +49,7 @@ gulp.task("css", function() {
 gulp.task("js", function() {
   return gulp.src("source/js/app.js").pipe(browserify({
     transform: reactify
-  })).pipe(concat("app.js")).pipe(uglify()).pipe(gulp.dest("./public/js"));
+  })).pipe(concat("app.js")).pipe(gulp.dest("./public/js"));
 });
 
 gulp.task("img", function() {
